@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-show-answer',
+  selector: 'show-answer',
   templateUrl: './show-answer.component.html',
   styleUrls: ['./show-answer.component.css']
 })
