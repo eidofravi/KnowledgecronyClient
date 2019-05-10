@@ -12,7 +12,7 @@ export class AnswerService {
   constructor(private http: HttpClient) { }
   
 
-  getAnswer(): Observable<Object> {
+  getAnswer(): Observable<any> {
   let id : number = 1;
     return this.http.get(this.answerBaseUrl);
   }
