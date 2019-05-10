@@ -1,3 +1,17 @@
 <p>
-  show-answer works!!
+    show-answer works!!
 </p>
+
+<ul>
+    <li *ngFor="let answer of answers">
+       <br/>
+       <br/>
+        <div *ngIf="answer && answer.type == 'image'">
+            <img id="image" [src]="answer.text">
+        </div>
+        <div *ngIf="answer && answer.type == 'text'">
+            {{answer.text}}
+        </div>
+    </li>
+</ul>
+

@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ShowAnswerComponent } from './show-answer/show-answer.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'ravi', pathMatch: 'full' },
+    { path: '', redirectTo: 'answer', pathMatch: 'full' },
     { path: 'answer', component: ShowAnswerComponent}
 ];
 
