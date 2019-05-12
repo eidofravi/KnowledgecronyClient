@@ -10,11 +10,10 @@ export class AnswerService {
   private answerBaseUrl = 'http://localhost:8081/api/answer';
 
   constructor(private http: HttpClient) { }
-  
 
-  getAnswer(): Observable<any> {
-  let id : number = 1;
-    return this.http.get(this.answerBaseUrl);
+
+  getAnswer(id : number): Observable<any> {
+    return this.http.get(`${this.answerBaseUrl}/${id}`);
   }
 
   //getCustomer(id: number): Observable<Object> {

@@ -18,7 +18,7 @@ export class ShowAnswerComponent implements OnInit {
     }
 
     private createAnswer() {
-        this.answerService.getAnswer()
+        this.answerService.getAnswer(1)
             .subscribe(
                 data => {
                    console.log(data);
