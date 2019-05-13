@@ -5,14 +5,14 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AnswerService {
+export class QuestionService {
 
-  private answerBaseUrl = 'http://localhost:8081/api/answer';
+  private answerBaseUrl = 'http://localhost:8081/api/question';
 
   constructor(private http: HttpClient) { }
 
 
-  getAnswer(id : number): Observable<any> {
-    return this.http.get(`${this.answerBaseUrl}/${id}`);
+  getQuestions(): Observable<any> {
+    return this.http.get(this.answerBaseUrl);
   }
 }

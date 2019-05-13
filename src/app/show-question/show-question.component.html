@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let question of questions, let i = index">
+
+     <div (click)="showAnswer(question, i)">
+      {{question.question}}
+     </div>
+
+     <div *ngIf="i == index">
+      <router-outlet></router-outlet>
+      </div>
+  </li>
+</ul>
+
