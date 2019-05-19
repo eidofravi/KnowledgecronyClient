@@ -1,9 +1,9 @@
 <ul>
   <li *ngFor="let question of questions, let i = index">
 
-     <div (click)="showAnswer(question, i)">
+     <a [routerLink]="" (click)="showAnswer(question, i)" >
       {{question.question}}
-     </div>
+     </a>
 
      <div *ngIf="i == index">
       <router-outlet></router-outlet>

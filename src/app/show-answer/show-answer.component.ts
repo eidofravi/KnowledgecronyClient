@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Answer } from '../answer';
 import { AnswerService } from '../answer.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'show-answer',
@@ -11,14 +12,21 @@ export class ShowAnswerComponent implements OnInit {
 
     answers: Answer[];
 
-    constructor(private answerService: AnswerService) { }
+    constructor(private answerService: AnswerService,
+      private route: ActivatedRoute) {
+
+      }
 
     ngOnInit() {
-        this.createAnswer();
+      this.route.paramMap.subscribe(params => {
+         alert('id : ' + params.get('id'));
+         this.createAnswer(Number(params.get('id')));
+      })
+
     }
 
-    private createAnswer() {
-        this.answerService.getAnswer(1)
+    private createAnswer(id : number) {
+        this.answerService.getAnswer(id)
             .subscribe(
                 data => {
                    console.log(data);

@@ -16,9 +16,8 @@ export class ShowQuestionComponent implements OnInit {
   constructor(private questionService: QuestionService, private router: Router) { }
 
   showAnswer(question, index) {
-    alert("hello alert" + question.categoryDesc);
     this.index = index;
-    this.router.navigate(['/question/answer', question.id]);
+    this.router.navigate(['/question/answer/', question.id]);
   }
 
   ngOnInit() {
