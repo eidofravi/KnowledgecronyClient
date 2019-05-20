@@ -1,8 +1,7 @@
 export class Answer {
     answerId: number;
-    answer: string;
+    text: string;
     type: string;
     priority: number;
-
 
 }

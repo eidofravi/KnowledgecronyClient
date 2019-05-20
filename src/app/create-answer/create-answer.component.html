@@ -1,0 +1,32 @@
+<h3>Create Question</h3>
+<div>
+  <button class="btn btn-success" (click)="createQuestion()">Add a Question</button>
+  <button class="btn btn-success" (click)="createParagraph()">Add a pragraph</button>
+  <button class="btn btn-success" (click)="createImage()">Add a image</button>
+</div>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+
+      <div *ngIf="showQuestion" class="form-group">
+          <label for="question">Question</label>
+          <input type="text" class="form-control" id="question"
+           [(ngModel)]="questionAnswer.question.question" name="question">
+        </div>
+
+      <li *ngFor="let answer of questionAnswer.answer, let i = index">
+          <div *ngIf="answer && answer.type == 'image'">
+              <img id="image" [src]="answer.text">
+          </div>
+          <div *ngIf="answer && answer.type == 'text'">
+              <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" required [(ngModel)]="answer.text" name="answer">
+                </div>
+          </div>
+        </li>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+

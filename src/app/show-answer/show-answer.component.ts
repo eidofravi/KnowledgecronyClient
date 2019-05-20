@@ -19,7 +19,6 @@ export class ShowAnswerComponent implements OnInit {
 
     ngOnInit() {
       this.route.paramMap.subscribe(params => {
-         alert('id : ' + params.get('id'));
          this.createAnswer(Number(params.get('id')));
       })
 

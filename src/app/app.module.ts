@@ -5,17 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShowAnswerComponent } from './show-answer/show-answer.component';
 import { ShowQuestionComponent } from './show-question/show-question.component';
+import { CreateAnswerComponent } from './create-answer/create-answer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
    declarations: [
       AppComponent,
       ShowAnswerComponent,
-      ShowQuestionComponent
+      ShowQuestionComponent,
+      CreateAnswerComponent
    ],
    imports: [
       BrowserModule,
       AppRoutingModule,
-      HttpClientModule
+      HttpClientModule,
+      FormsModule
    ],
    providers: [],
    bootstrap: [
